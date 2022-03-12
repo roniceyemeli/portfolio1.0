@@ -1,0 +1,96 @@
+@import "../../global.scss";
+
+.contact{
+    background-color: white;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    .left{
+        flex: 1;
+        margin-left: 46px;
+
+        @include mobile{
+            display: flex;
+        }
+
+        img{
+            height: 99%;
+            @include tablet1{
+                height: 70%;
+            }
+        }
+    }
+
+    .right{
+        flex: 1;
+        @include flexBoxCenter;
+        flex-direction: column;
+
+        h2{
+            font-size: 30px;
+            @include tablet1{
+                font-size: 20px;
+            }
+        }
+
+        form{
+            width: 70%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            input{
+                width: 300px;
+                height: 30px ;
+                font-size: 14px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 20px;
+                }
+                @include tablet1{
+                    width: 190px;
+                    height: 20px;
+                }
+            }
+
+            textarea{
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+
+                @include mobile{
+                    width: 200px;
+                    height: 100px;
+                }
+                @include tablet1{
+                    width: 190px;
+                    height: 100px;
+                }
+            }
+
+            .btn{
+                width: 150px;
+                height: 30px;
+                color: white;
+                background-color: crimson;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            span{
+                color: #1ec21e;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+$main: #4E97D1;
+$wh: white;
+
+$width1: 768px;
+$width2: 873px;
+$width3: 1115px;
+
+@mixin mobile {
+    @media(max-width: #{$width1}){
+        @content
+    }
+};
+
+@mixin tablet1{
+    @media(max-width: #{$width2}){
+        @content
+    }
+};
+
+@mixin tablet2{
+    @media(max-width: #{$width3}){
+        @content
+    }
+};
+
+@mixin flexBoxCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
